@@ -17,7 +17,13 @@ if (process.env.NODE_ENV !== 'production') {
 const app = express()
 const port = 3001
 app.use(express.json({ limit: '50mb' }))
-app.use(cors())
+
+const corsOptions = {
+    origin: 'https://play-spots.vercel.app/',
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.use('/', userRoute)
 app.use('/admin', adminRoute)
@@ -32,7 +38,7 @@ connectDB()
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000'
+        origin: 'https://play-spots.vercel.app'
     }
 });
 
@@ -48,6 +54,6 @@ io.on("connection", (socket) => {
     })
 
     socket.on('newMessage', (message) => {
-        socket.to(message.chatId._id).emit('receiveMessage',message)
+        socket.to(message.chatId._id).emit('receiveMessage', message)
     })
 })
