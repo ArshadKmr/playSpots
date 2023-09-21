@@ -1,0 +1,9 @@
+.leaflet-container{
+    height: 600px;
+    width: 100%;
+}
+
+.mapRoute-container{
+    height: 200px;
+    width: 300px;
+}
