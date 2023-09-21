@@ -8,7 +8,7 @@ import { io } from 'socket.io-client'
 import TimeAgo from 'react-timeago'
 
 
-const ENDPOINT = 'http://localhost:3001'
+const ENDPOINT = 'http://playspots.shop'
 
 const Chat = () => {
     const dispatch = useDispatch()
