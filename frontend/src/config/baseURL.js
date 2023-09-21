@@ -4,13 +4,13 @@ import { setLoading } from '../features/loading/loadingSlice';
 
 
 export const axiosInstanceAdmin = axios.create({
-    baseURL: 'http://playspots.shop/admin/'
+    baseURL: 'https://playspots.shop/admin/'
 });
 export const axiosInstanceUser = axios.create({
-    baseURL: 'http://playspots.shop/'
+    baseURL: 'https://playspots.shop/'
 });
 export const axiosInstanceProvider = axios.create({
-    baseURL: 'http://playspots.shop/provider/'
+    baseURL: 'https://playspots.shop/provider/'
 });
 
 
